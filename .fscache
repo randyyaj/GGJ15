@@ -1,4 +1,14 @@
-::res://::1422127322
+::res://::1422134077
 icon.png::ImageTexture::1422127322::
-::res://scenes::1422127322
-main.scn::PackedScene::1422127322::
+::res://images::1422134108
+baby.png::ImageTexture::1422134108::
+background.png::ImageTexture::1422133868::
+creditsButtonNormal.png::ImageTexture::1422133868::
+creditsButtonPressed.png::ImageTexture::1422133868::
+logo.png::ImageTexture::1422133868::
+startButtonNormal.png::ImageTexture::1422133868::
+startButtonPressed.png::ImageTexture::1422133868::
+::res://scenes::1422133868
+character.scn::PackedScene::1422132085::
+splashScreen.scn::PackedScene::1422133868::
+stage.scn::PackedScene::1422132429::
