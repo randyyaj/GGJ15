@@ -44,7 +44,7 @@ func reset_game():
 	previous_platform.free()
 	current_platform.free()
 	generate_random_platform()
-	player.set_pos(Vector2(40, 500))
+	player.set_pos(Vector2(60, 500))
 	previous_platform.set_pos(Vector2(35, 510))
 
 func generate_random_platform():
@@ -93,6 +93,7 @@ func _process(delta):
 	
 	#if (player_pos.y == current_platform.get_pos().y):
 	#	print("LANDED")
+	# TODO!!!!
 	
 	# SPACE
 	if (!player.is_in_air()):
