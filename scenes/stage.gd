@@ -41,6 +41,6 @@ func _process(delta):
 		is_ui_cancel_pressed = false
 
 func launch_player(charge):
-	#player.set_angular_velocity(10.0)
+	player.set_angular_velocity(10.0)
 	player.set_linear_velocity(Vector2(charge, -(charge * 2)))
 	print(charge)
