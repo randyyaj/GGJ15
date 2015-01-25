@@ -10,11 +10,13 @@ var is_ui_accept_pressed = false
 
 # Global vars ------------------------------------------------------------------
 var player
+var playerAnim
 var charge = 0;
 
 # Functions --------------------------------------------------------------------
 func _ready():
 	player = get_node('player')
+	playerAnim = player.get_node('playerSprite').get_node('playerAnimation')
 	set_process(true)
 
 
@@ -25,6 +27,7 @@ func _process(delta):
 	if Input.is_action_pressed('ui_accept'):
 		charge += 2
 		is_ui_accept_pressed = true
+		playerAnim.play('charge')
 	else:
 		if is_ui_accept_pressed == true:
 			launch_player(charge)
@@ -42,5 +45,6 @@ func _process(delta):
 
 func launch_player(charge):
 	player.set_angular_velocity(10.0)
+	playerAnim.play('fly')
 	player.set_linear_velocity(Vector2(charge, -(charge * 2)))
 	print(charge)
