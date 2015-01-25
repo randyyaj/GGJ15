@@ -1,6 +1,6 @@
-::res://::1422134077
+::res://::1422142202
 icon.png::ImageTexture::1422127322::
-::res://images::1422134108
+::res://images::1422135559
 baby.png::ImageTexture::1422134108::
 background.png::ImageTexture::1422133868::
 creditsButtonNormal.png::ImageTexture::1422133868::
@@ -8,7 +8,14 @@ creditsButtonPressed.png::ImageTexture::1422133868::
 logo.png::ImageTexture::1422133868::
 startButtonNormal.png::ImageTexture::1422133868::
 startButtonPressed.png::ImageTexture::1422133868::
-::res://scenes::1422133868
-character.scn::PackedScene::1422132085::
+::res://images/characterScene::1422135559
+player.png::ImageTexture::1422135559::
+::res://images/evironmentScene::1422135559
+lava.png::ImageTexture::1422135559::
+::res://scenes::1422144848
+character.scn::PackedScene::1422141498::
+lava.scn::PackedScene::1422142069::
+player.scn::PackedScene::1422142124::
 splashScreen.scn::PackedScene::1422133868::
-stage.scn::PackedScene::1422132429::
+stage.gd::GDScript::1422144848::
+stage.scn::PackedScene::1422144279::
