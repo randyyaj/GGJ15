@@ -1,26 +1,16 @@
-
 extends RigidBody2D
 
-# member variables here, example:
-# var a=2
-# var b="textvar"
+var IN_AIR = 0
 
-var JUMP_VELOCITY = 200
-
-func _ready():
-	# Initalization here
-	pass
+var is_in_air = false
 
 func _integrate_forces(s):
 	#print("HERE ", s)
-	print(s.get_contact_count())
 	#print(s.get_contact_count())
-	if (s.get_contact_count() == 0):
-		Input.disconnect()
+	if (s.get_contact_count() == IN_AIR):
+		is_in_air = true
+	else:
+		is_in_air = false
 
-#func collisionCallback():
-	
-
-	
-
-
+func is_in_air():
+	return is_in_air
