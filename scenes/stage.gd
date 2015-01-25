@@ -28,7 +28,7 @@ func _process(delta):
 		charge += 2
 		is_ui_accept_pressed = true
 		playerAnim.play('charge')
-		print(charge)
+		get_node('chargeMeter').set_value(charge)
 	else:
 		if is_ui_accept_pressed == true:
 			launch_player(charge)
