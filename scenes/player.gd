@@ -12,9 +12,15 @@ func _ready():
 	pass
 
 func _integrate_forces(s):
-	var lv = s.get_linear_velocity()
+	#print("HERE ", s)
+	print(s.get_contact_count())
+	#print(s.get_contact_count())
+	if (s.get_contact_count() == 0):
+		Input.disconnect()
+
+#func collisionCallback():
 	
-	if (Input.is_action_pressed('ui_accept')):
-		lv.y = -JUMP_VELOCITY
-		
+
+	
+
 
