@@ -66,6 +66,7 @@ func _process(delta):
 func launch_player(charge):
 	player.set_angular_velocity(10.0)
 	playerAnim.play('fly')
+	get_node('SamplePlayer2D').play('Jump')
 	player.set_linear_velocity(Vector2(charge, -(charge * 2)))
 
 
