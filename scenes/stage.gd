@@ -118,6 +118,8 @@ func generate_random_platform():
 	move_child(node, 0)
 	current_platform = node
 	
+	randomize()
+	random = randi() % 4
 	scene = load(platforms[random])
 	node = scene.instance()
 	add_child(node)
