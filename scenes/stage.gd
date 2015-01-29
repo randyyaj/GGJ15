@@ -14,10 +14,10 @@ extends Node2D
 
 # Constants --------------------------------------------------------------------
 const MAX_CHARGE = 160
-var PLATFORMS = ["res://scenes/drawer_kinematic.scn",
-	"res://scenes/tv_kinematic.scn",
-	"res://scenes/bed_kinematic.scn",
-	"res://scenes/couch_kinematic.scn"]
+var PLATFORMS = ["res://scenes/drawer_kinematic.xml",
+	"res://scenes/tv_kinematic.xml",
+	"res://scenes/bed_kinematic.xml",
+	"res://scenes/couch_kinematic.xml"]
 
 # Flags ------------------------------------------------------------------------
 var is_ui_cancel_pressed = false
@@ -49,7 +49,7 @@ func _ready():
 	player_anim = player.get_node('playerSprite/playerAnimation')
 	lava = get_node('death')
 	music = get_node('SamplePlayer2D');
-	music.play('bg',0)
+	#music.play('bg',0)
 	next_platform = generate_random_platform()
 	current_platform = generate_base_platform()
 	future_platform = generate_random_platform()
@@ -58,8 +58,8 @@ func _ready():
 
 func _process(delta):	
 	
-	if (!music.is_voice_active(0)):
-		music.play('bg', 0)
+	#if (!music.is_voice_active(0)):
+	#	music.play('bg', 0)
 	
 	if (current_platform != null):
 		current_platform.move(Vector2(0,0))
