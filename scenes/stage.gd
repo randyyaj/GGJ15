@@ -40,9 +40,14 @@ var lava
 var scene
 var charge = 0;
 var base_platform_position = Vector2(40, 500)
+var camera
+var splash
+var startButton
+var creditsButton
 
 # Functions --------------------------------------------------------------------
 func _ready():
+	splash = get_node('splash')
 	player = get_node('player')
 	score = get_node('score')
 	charge_meter = get_node('chargeMeter')
@@ -53,6 +58,9 @@ func _ready():
 	next_platform = generate_random_platform()
 	current_platform = generate_base_platform()
 	future_platform = generate_random_platform()
+	camera = get_node('camera')
+	startButton = splash.get_node('startButton')
+	creditsButton = splash.get_node('creditsButton')
 	set_process(true)
 
 
@@ -60,6 +68,15 @@ func _process(delta):
 	
 	#if (!music.is_voice_active(0)):
 	#	music.play('bg', 0)
+	
+	# Start button
+	if (startButton.pressed):
+		print("Start button pressed")
+		camera.set_offset(Vector2(0,0))
+		startButton.pressed = false
+	
+	if (creditsButton.pressed):
+		print("Credits button pressed")
 	
 	if (current_platform != null):
 		current_platform.move(Vector2(0,0))
@@ -93,6 +110,7 @@ func _process(delta):
 		if is_ui_cancel_pressed == false:
 			print('cancel pressed')
 			is_ui_cancel_pressed = true
+			camera.set_offset(Vector2(0,-600))
 	else:
 		is_ui_cancel_pressed = false
 
@@ -201,5 +219,6 @@ func generate_base_platform():
 	return node
 	
 
-#func prompt_game_over:
+func pause_screen():
+	pass
 

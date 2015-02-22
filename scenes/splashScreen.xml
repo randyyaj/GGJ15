@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="7" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
-	<ext_resource path="res://images/startButtonNormal.png" type="Texture"></ext_resource>
-	<ext_resource path="res://images/creditsButtonNormal.png" type="Texture"></ext_resource>
-	<ext_resource path="res://images/creditsButtonPressed.png" type="Texture"></ext_resource>
-	<ext_resource path="res://images/logo.png" type="Texture"></ext_resource>
-	<ext_resource path="res://images/startButtonPressed.png" type="Texture"></ext_resource>
+<resource_file type="PackedScene" subresource_count="9" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
 	<ext_resource path="res://images/background.png" type="Texture"></ext_resource>
+	<ext_resource path="res://images/creditsButtonPressed.png" type="Texture"></ext_resource>
+	<ext_resource path="res://images/startButtonNormal.png" type="Texture"></ext_resource>
+	<ext_resource path="res://scenes/creditsButton.gd" type="Script"></ext_resource>
+	<ext_resource path="res://images/creditsButtonNormal.png" type="Texture"></ext_resource>
+	<ext_resource path="res://images/logo.png" type="Texture"></ext_resource>
+	<ext_resource path="res://scenes/startButton.gd" type="Script"></ext_resource>
+	<ext_resource path="res://images/startButtonPressed.png" type="Texture"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
-			<string_array  len="36">
+			<string_array  len="38">
 				<string> "background" </string>
 				<string> "TextureFrame" </string>
 				<string> "_import_path" </string>
@@ -46,6 +48,8 @@
 				<string> "textures/disabled" </string>
 				<string> "textures/focused" </string>
 				<string> "textures/click_mask" </string>
+				<string> "script/script" </string>
+				<string> "creditsButton" </string>
 			</string_array>
 			<string> "version" </string>
 			<int> 1 </int>
@@ -54,7 +58,7 @@
 			<string> "node_count" </string>
 			<int> 4 </int>
 			<string> "variants" </string>
-			<array  len="28" shared="false">
+			<array  len="30" shared="false">
 				<node_path> "" </node_path>
 				<bool> True </bool>
 				<real> 1 </real>
@@ -67,16 +71,26 @@
 				<dictionary  shared="false">
 					<string> "__editor_plugin_states__" </string>
 					<dictionary  shared="false">
+						<string> "Script" </string>
+						<dictionary  shared="false">
+							<string> "current" </string>
+							<int> 0 </int>
+							<string> "sources" </string>
+							<array  len="2" shared="false">
+								<string> "res://scenes/startButton.gd" </string>
+								<string> "res://scenes/creditsButton.gd" </string>
+							</array>
+						</dictionary>
 						<string> "2D" </string>
 						<dictionary  shared="false">
 							<string> "pixel_snap" </string>
 							<bool> False </bool>
 							<string> "zoom" </string>
-							<real> 0.54036 </real>
+							<real> 0.814506 </real>
 							<string> "use_snap" </string>
 							<bool> False </bool>
 							<string> "ofs" </string>
-							<vector2> -353.229, -600 </vector2>
+							<vector2> -382.032, -171.266 </vector2>
 							<string> "snap" </string>
 							<int> 10 </int>
 						</dictionary>
@@ -181,7 +195,7 @@
 						<int> 0 </int>
 					</dictionary>
 					<string> "__editor_plugin_screen__" </string>
-					<string> "2D" </string>
+					<string> "Script" </string>
 				</dictionary>
 				<real> 81 </real>
 				<real> 90 </real>
@@ -194,15 +208,17 @@
 				<real> 431 </real>
 				<resource  resource_type="Texture" path="res://images/startButtonNormal.png">  </resource>
 				<resource  resource_type="Texture" path="res://images/startButtonPressed.png">  </resource>
-				<resource name=""></resource>				<real> 302 </real>
+				<resource name=""></resource>				<resource  resource_type="Script" path="res://scenes/startButton.gd">  </resource>
+				<real> 302 </real>
 				<real> 449 </real>
 				<real> 502 </real>
 				<real> 531 </real>
 				<resource  resource_type="Texture" path="res://images/creditsButtonNormal.png">  </resource>
 				<resource  resource_type="Texture" path="res://images/creditsButtonPressed.png">  </resource>
+				<resource  resource_type="Script" path="res://scenes/creditsButton.gd">  </resource>
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="218"> 				-1, -1, 1, 0, -1, 20, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 0, 10, 0, 11, 0, 12, 0, 13, 1, 14, 1, 15, 6, 16, 6, 17, 2, 18, 7, 19, 8, 20, 3, 21, 9, 0, 0, 0, 1, 22, -1, 21, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 23, 10, 24, 11, 7, 12, 8, 13, 9, 0, 10, 0, 11, 0, 12, 0, 13, 1, 14, 1, 15, 6, 16, 6, 17, 2, 18, 14, 19, 8, 20, 3, 0, 0, 0, 26, 25, -1, 27, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 23, 15, 24, 16, 7, 17, 8, 18, 9, 0, 10, 0, 11, 0, 12, 0, 13, 3, 14, 1, 15, 6, 16, 6, 17, 2, 27, 3, 28, 3, 29, 3, 30, 19, 31, 20, 32, 21, 33, 21, 34, 21, 35, 21, 0, 0, 0, 26, 26, -1, 27, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 23, 22, 24, 23, 7, 24, 8, 25, 9, 0, 10, 0, 11, 0, 12, 0, 13, 3, 14, 1, 15, 6, 16, 6, 17, 2, 27, 3, 28, 3, 29, 3, 30, 26, 31, 27, 32, 21, 33, 21, 34, 21, 35, 21, 0 </int_array>
+			<int_array  len="222"> 				-1, -1, 1, 0, -1, 20, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 0, 10, 0, 11, 0, 12, 0, 13, 1, 14, 1, 15, 6, 16, 6, 17, 2, 18, 7, 19, 8, 20, 3, 21, 9, 0, 0, 0, 1, 22, -1, 21, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 23, 10, 24, 11, 7, 12, 8, 13, 9, 0, 10, 0, 11, 0, 12, 0, 13, 1, 14, 1, 15, 6, 16, 6, 17, 2, 18, 14, 19, 8, 20, 3, 0, 0, 0, 26, 25, -1, 28, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 23, 15, 24, 16, 7, 17, 8, 18, 9, 0, 10, 0, 11, 0, 12, 0, 13, 3, 14, 1, 15, 6, 16, 6, 17, 2, 27, 3, 28, 3, 29, 3, 30, 19, 31, 20, 32, 21, 33, 21, 34, 21, 35, 21, 36, 22, 0, 0, 0, 26, 37, -1, 28, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 23, 23, 24, 24, 7, 25, 8, 26, 9, 0, 10, 0, 11, 0, 12, 0, 13, 3, 14, 1, 15, 6, 16, 6, 17, 2, 27, 3, 28, 3, 29, 3, 30, 27, 31, 28, 32, 21, 33, 21, 34, 21, 35, 21, 36, 29, 0 </int_array>
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 		</dictionary>
